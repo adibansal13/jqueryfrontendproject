@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+  <head>
+    <title>jQuery Form Validation</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+      body {
+        background: #f4f6f9;
+      }
+      .card {
+        border-radius: 15px;
+      }
+      .error {
+        color: red;
+        font-size: 14px;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center mt-4"
+    >
+      <div class="card p-4 shadow w-50">
+        <h3 class="text-center mb-4">User Authentication System</h3>
+
+        <!-- Toggle Buttons -->
+        <div class="text-center mb-3">
+          <button class="btn btn-primary btn-sm" id="showLogin">Login</button>
+          <button class="btn btn-success btn-sm" id="showSignup">Signup</button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm">
+          <div class="mb-3">
+            <input
+              type="text"
+              id="loginEmail"
+              class="form-control"
+              placeholder="Email"
+            />
+            <div class="error" id="loginEmailError"></div>
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="password"
+              id="loginPassword"
+              class="form-control"
+              placeholder="Password"
+            />
+            <div class="error" id="loginPasswordError"></div>
+          </div>
+
+          <button class="btn btn-primary w-100">Login</button>
+
+          <div class="text-end mt-2">
+            <a href="#" id="forgotLink">Forgot Password?</a>
+          </div>
+        </form>
+
+        <!-- SIGNUP FORM -->
+        <form id="signupForm" class="hidden">
+          <div class="mb-3">
+            <input
+              type="text"
+              id="signupName"
+              class="form-control"
+              placeholder="Full Name"
+            />
+            <div class="error" id="signupNameError"></div>
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="text"
+              id="signupEmail"
+              class="form-control"
+              placeholder="Email"
+            />
+            <div class="error" id="signupEmailError"></div>
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="password"
+              id="signupPassword"
+              class="form-control"
+              placeholder="Password"
+            />
+            <div class="error" id="signupPasswordError"></div>
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="password"
+              id="signupConfirmPassword"
+              class="form-control"
+              placeholder="Confirm Password"
+            />
+            <div class="error" id="signupConfirmPasswordError"></div>
+          </div>
+
+          <button class="btn btn-success w-100">Signup</button>
+        </form>
+
+        <!-- FORGOT PASSWORD -->
+        <form id="forgotForm" class="hidden">
+          <div class="mb-3">
+            <input
+              type="text"
+              id="forgotEmail"
+              class="form-control"
+              placeholder="Enter Registered Email"
+            />
+            <div class="error" id="forgotEmailError"></div>
+          </div>
+
+          <button class="btn btn-warning w-100">Reset Password</button>
+        </form>
+
+        <!-- CHANGE PASSWORD -->
+        <form id="changePasswordForm" class="hidden">
+          <div class="mb-3">
+            <input
+              type="password"
+              id="newPassword"
+              class="form-control"
+              placeholder="New Password"
+            />
+            <div class="error" id="newPasswordError"></div>
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="password"
+              id="confirmNewPassword"
+              class="form-control"
+              placeholder="Confirm New Password"
+            />
+            <div class="error" id="confirmNewPasswordError"></div>
+          </div>
+
+          <button class="btn btn-danger w-100">Change Password</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
